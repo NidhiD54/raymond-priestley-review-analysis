@@ -21,16 +21,16 @@ The Raymond Priestley Centre runs a range of residential and day programmes — 
 ├── Reviews_sentimentanalysis.ipynb             # Sentiment analysis notebook
 ├── Timeseries__Hybrid_STL___SARIMA_.ipynb      # Time-series forecasting notebook
 ├── img/                                        # Chart outputs
-│   ├── img_attendance_original.png
-│   ├── img_trend_component.png
-│   ├── img_stationary_residual.png
-│   ├── img_acf_pacf.png
-│   ├── img_sarima_forecast.png
-│   ├── img_wordcloud_recommendation.png
-│   ├── img_avg_sentiment_bar.png
-│   ├── img_sentiment_distribution_pie.png
-│   ├── img_sentiment_heatmap.png
-│   └── img_top20_words.png
+│   ├── img_Attendance_data.png
+│   ├── img_Trend_Component.png
+│   ├── img_Stationary_residual_component.png
+│   ├── img_Correlation.png
+│   ├── img_Hybrid STL_Sarima Forecast.png
+│   ├── img_Word_Cloud.png
+│   ├── img_Avg_Sentiment_Score_Category.png
+│   ├── img_Overall_Sentiment_distribution.png
+│   ├── img_Heatmap_Avg_sentiment_score.png
+│   └── img_Top_20_Most_frequent_words.png
 └── README.md
 ```
 
@@ -40,7 +40,7 @@ The Raymond Priestley Centre runs a range of residential and day programmes — 
 
 ## Dataset
 
-**File:** `Reviews_RPC_Cleaned.xlsx`
+**Files:** `Reviews_RPC_Cleaned.xlsx`, `Reviews.xlsx`
 
 The workbook contains five sheets:
 
@@ -105,35 +105,35 @@ Forecasts future attendance at the Raymond Priestley Centre using a hybrid decom
 **Original Attendance Data**
 Monthly attendance at the RPC from early 2021 to mid-2024, showing strong growth and increasing volatility in 2023–2024.
 
-![Original Attendance Data](img/img_attendance_original.png)
+![Original Attendance Data](img/Attendance_data.png)
 
 ---
 
 **STL Trend Component**
 The long-term upward trend extracted from the time series via STL decomposition, showing accelerating growth from 2023 onwards.
 
-![Trend Component](img/img_trend_component.png)
+![Trend Component](img/Trend_Component.png)
 
 ---
 
 **Stationary Residual Component**
 The residual series after Yeo-Johnson transformation and first-order differencing, confirming stationarity prior to ARIMA modelling.
 
-![Stationary Residual Component](img/img_stationary_residual.png)
+![Stationary Residual Component](img/Stationary_residual_component.png)
 
 ---
 
 **ACF and PACF Plots**
 Autocorrelation and Partial Autocorrelation plots used to identify the lag structure for the SARIMA model.
 
-![ACF and PACF](img/img_acf_pacf.png)
+![ACF and PACF](img/Correlation.png)
 
 ---
 
 **Hybrid STL + SARIMA Forecast (Till January 2025)**
 Final combined forecast showing training data, test set actuals, in-sample forecasts, and future projections through to January 2025.
 
-![Hybrid STL + SARIMA Forecast](img/img_sarima_forecast.png)
+![Hybrid STL + SARIMA Forecast](img/Hybrid_STL_Sarima_Forecast.png)
 
 ---
 
@@ -142,35 +142,35 @@ Final combined forecast showing training data, test set actuals, in-sample forec
 **Word Cloud — Likelihood of Recommendation**
 The most frequently used words in recommendation-related comments. Dominant terms like *activities*, *experience*, *great*, *staff*, and *amazing* reflect overwhelmingly positive participant sentiment.
 
-![Word Cloud - Likelihood of Recommendation](img/img_wordcloud_recommendation.png)
+![Word Cloud - Likelihood of Recommendation](img/Word_Cloud.png)
 
 ---
 
 **Average Sentiment Scores by Category**
 VADER compound sentiment scores averaged across each review category. *Likelihood of recommendation* (0.65) and *Educational delivery and instructions* (0.54) score highest; *Improvement ideas* (0.25) and *Interested for further opportunities* (0.13) are lower by nature of their content.
 
-![Average Sentiment Scores by Category](img/img_avg_sentiment_bar.png)
+![Average Sentiment Scores by Category](img/Avg_Sentiment_Score_Category.png)
 
 ---
 
 **Overall Sentiment Distribution**
 Across all open-text comments, **75.7%** are classified as Positive, **19.1%** as Neutral, and only **5.2%** as Negative — indicating a highly satisfied participant base.
 
-![Overall Sentiment Distribution](img/img_sentiment_distribution_pie.png)
+![Overall Sentiment Distribution](img/Overall_Sentiment_distribution.png)
 
 ---
 
 **Heatmap of Average Sentiment Scores Across Categories**
 A colour-coded summary of VADER scores per category. *Likelihood of recommendation* (0.66) and *Educational delivery and instructions* (0.54) are the strongest; *Interested for further opportunities* (0.13) is the lowest, consistent with that category capturing more tentative or conditional responses.
 
-![Sentiment Heatmap](img/img_sentiment_heatmap.png)
+![Sentiment Heatmap](img/Heatmap_Avg_sentiment_score.png)
 
 ---
 
 **Top 20 Most Frequent Words (Excluding Common Words)**
 The most commonly used words across all review comments. *Activities* and *good* lead at ~275 occurrences each, followed by *food*, *great*, *fun*, and *time* — reinforcing the themes visible in the word cloud.
 
-![Top 20 Most Frequent Words](img/img_top20_words.png)
+![Top 20 Most Frequent Words](img/Top_20_Most_frequent_words.png)
 
 ---
 
